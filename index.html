@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Notes app</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="nav_child">Home</a>
+        <a href="#" class="nav_child">Contact Us</a>
+        <a href="#" class="nav_child">Privacy</a>
+        <a href="#" class="nav_child search">Search</a>
+      </nav>
+    </header>
+    <div class="input_container">
+      <textarea
+        name=""
+        cols="30"
+        rows="10"
+        class="input"
+        draggable="false"
+        placeholder="Type your notes"
+      ></textarea>
+      <button title="Click to add and dbl click to remove notes">
+        Add note
+      </button>
+    </div>
+    <hr id="hr" />
+    <div class="notes">
+      <div class="noteFather">
+          <h2>1.</h2>
+        <p class="note">Nothing to display</p>
+        <button class="delete">Delete</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
