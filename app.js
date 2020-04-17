@@ -5,9 +5,9 @@ let noteStorage = document.querySelector(".notes");
 let searchbtn = document.getElementsByClassName("search")[0];
 let notesObj;
 let nav = document.getElementsByTagName("nav")[0];
+let boolean = false;
 let search = document.createElement('input');
 search.id = `search`
-let boolean = false;
 search.placeholder=`Search notes`;
 addNotes();
 btn.addEventListener("click", () => {
@@ -20,8 +20,6 @@ btn.addEventListener("click", () => {
   }
   notesObj.push(value);
   localStorage.setItem("notes", JSON.stringify(notesObj));
-
-  console.log(notesObj.length);
   input.value = "";
   addNotes();
 });
@@ -57,7 +55,6 @@ function deleteNote(index) {
   }
   notesObj.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesObj));
-
   addNotes();
 }
 
@@ -85,26 +82,3 @@ search.addEventListener('input',()=>{
    }
   })
 })
-
-
-
-
-
-/*
- Skipped portion
-function onclick(){
-    let value = input.value.trim();
-    let player = localStorage.length;
-    player++;
-    console.log(player);
-    localStorage.setItem(player,value);
-    let note = document.createElement('p');
-    note.textContent = `${localStorage.getItem(player)}`;
-    noteStorage.appendChild(note);
-}
-
-btn.addEventListener('click',onclick);
-btn.addEventListener('dblclick', ()=>{
-    localStorage.clear()
-});
-*/
